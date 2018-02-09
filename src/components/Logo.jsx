@@ -1,10 +1,17 @@
 import React from "react";
+import logo from '../assets/images/logo.png';
 
 
 function Logo(){
   return (
     <div>
-    Logo works
+      <style jsx>{`
+        img {
+        height: 175px;
+        }
+      `}</style>
+      <img src={logo}/>
+      
     </div>
   );
 }
