@@ -40,7 +40,7 @@ module.exports = {
           name: 'images/[hash]-[name].[ext]'
           }
         }
-      }
+      },
       {
         test: /\.jsx?$/,
         enforce: "pre",
