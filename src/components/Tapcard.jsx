@@ -1,15 +1,13 @@
 import React from "react";
-import Hero from "./Hero";
 
 
-function Home(){
+function Tapcard(){
   return (
     <div>
-
-
+    tapcard works
     </div>
 
   );
 }
 
-export default Home;
+export default Tapcard;
