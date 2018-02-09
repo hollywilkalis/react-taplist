@@ -1,5 +1,8 @@
 import React from "react";
 import Tapcard from './Tapcard';
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
 
 var masterTapList = [
   {
@@ -33,8 +36,24 @@ var masterTapList = [
 ];
 function Taplist(){
   return (
-    <div>Taplist works
-    <Tapcard />
+    <div>
+
+      <Grid>
+        <Row className="show-grid">
+            {masterTapList.map((tapcard, index) =>
+              <Col xs={6} md={4}>
+              <Tapcard
+                name={tapcard.name}
+                brand={tapcard.brand}
+                price={tapcard.price}
+                alcoholContent={tapcard.alcoholContent}
+                amountRemaining={tapcard.amountRemaining}
+                key={index}
+              />
+              </Col>
+            )}
+        </Row>
+      </Grid>
     </div>
 
   );
