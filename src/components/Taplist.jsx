@@ -3,8 +3,9 @@ import Tapcard from './Tapcard';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
+import PropTypes from "prop-types";
 
-var masterTapList = [
+const masterTapList = [
   {
     name: 'Made Marion',
     brand: '2 Towns',
@@ -58,5 +59,13 @@ function Taplist(){
 
   );
 }
+
+Taplist.PropTypes = {
+  name: PropTypes.string,
+  brand: PropTypes.string,
+  price: PropTypes.number,
+  alcoholContent: PropTypes.number,
+  amountRemaining: PropTypes.amountRemaining
+};
 
 export default Taplist;

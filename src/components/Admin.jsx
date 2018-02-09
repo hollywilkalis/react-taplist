@@ -1,10 +1,12 @@
 import React from "react";
+import Stafftaplist from "./Stafftaplist";
 
 
 function Admin(){
   return (
-    <div>Admin works
-    
+    <div>
+      <Stafftaplist />
+
     </div>
 
   );

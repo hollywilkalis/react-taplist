@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "./Logo";
+
 import Nav from "./Nav";
 
 
@@ -19,7 +19,7 @@ function Header(){
             color: white;
           }
         `}</style>
-    <Logo />
+    
     <h1>Portland's Cider Bar</h1>
     <Nav />
     </div>

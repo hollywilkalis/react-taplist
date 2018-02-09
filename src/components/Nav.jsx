@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-function Nav(){
+function Nav(props){
+  var links = {
+    color: '#ecf0f1',
+  }
   return (
     <div>
       <style jsx>{`
@@ -20,12 +23,16 @@ function Nav(){
           }
           Link {
             text-decoration: none;
+            color: white;
+          }
 
+          Link:visited {
+            color: white;
           }
         `}</style>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="taplist">View our taplist</Link></li>
+        <li><Link to="/" style={links}>Home</Link></li>
+        <li><Link to="taplist" style={links}>View our taplist</Link></li>
       </ul>
     </div>
   );
