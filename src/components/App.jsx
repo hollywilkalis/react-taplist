@@ -5,6 +5,11 @@ import Footer from "./Footer";
 
 
 function App(){
+  <style jsx global>{`
+        * {
+          box-sizing: border-box;
+        }
+      `}</style>
   return (
     <div>
     <Header />

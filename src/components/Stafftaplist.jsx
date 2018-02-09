@@ -40,9 +40,11 @@ function Stafftaplist(props){
     <style jsx>{`
       div {
         width: 50%;
+        padding: 20px
       }
 
       `}</style>
+      <h2>Our current taps</h2>
       {staffTapList.map((stafftapdisplay, index) =>
         <Stafftapdisplay
           name={stafftapdisplay.name}
