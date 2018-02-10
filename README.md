@@ -31,7 +31,7 @@ _{Let people know what to do if they run into any issues or have questions, idea
 Project uses React, npm, Weback, Lint and React-Bootstrap
 
 ## Notes
-![Project flowchart](/app-sketches/app flowchart.png?raw=true "Project flowchart")
+<img src="/app-sketches/App flowchart.png"/>
 
 ### License
 
