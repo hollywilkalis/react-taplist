@@ -6,6 +6,7 @@ function Hero(){
   const divStyle = {
     backgroundImage: `url(${hero})`,
     height: 400,
+    width: '100%',
     backgroundSize: 'cover',
     backgroundRepeat: 'none',
     padding: 40,
