@@ -9,6 +9,13 @@ function App(){
         * {
           box-sizing: border-box;
         }
+        Link {
+          text-decoration: none;
+        }
+
+        Link:visited {
+          color: white;
+        }
       `}</style>
   return (
     <div>

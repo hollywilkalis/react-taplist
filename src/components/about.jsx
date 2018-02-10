@@ -17,18 +17,18 @@ function About(){
         font-size: 25px;
         text-align: center;
       }
-      h5 {
+      h4 {
         color: #93cc72;
         font-weight: bold;
       }
     `}</style>
     <h3>About Us</h3>
-    <h5>Our hours</h5>
+    <h4>Our hours</h4>
     <ul>
       <li>Sunday – Thursday: noon to 10pm</li>
       <li>Friday & Saturday: noon to 11pm</li>
     </ul>
-    <h5>Our location</h5>
+    <h4>Our location</h4>
     <p>1212-D SE Powell<br/>
     Portland, OR 97202</p>
 

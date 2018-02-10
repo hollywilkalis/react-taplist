@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom';
 
 
 function Footer(){
+  const links = {
+    color: '#ecf0f1',
+  }
+  
   return (
     <div>
     <style jsx>{`
           div {
-            background-color: #162E08;
+            background-color: #26510d;
             height: 100px;
           }
           p {
@@ -17,7 +21,7 @@ function Footer(){
             padding: 10px;
           }
         `}</style>
-      <p><Link to="admin">Admin login</Link></p>
+      <p><Link to="admin" style={links}>Admin login</Link></p>
     </div>
 
   );

@@ -8,7 +8,7 @@ function Header(){
     <div>
     <style jsx>{`
           div {
-            background-color: #162E08;
+            background-color: #26510d;
             height: 200px;
             display: flex;
             flex-direction: row;
