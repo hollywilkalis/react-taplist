@@ -17,6 +17,8 @@ function Header(){
           }
           h1 {
             color: white;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: bold;
           }
         `}</style>
     <Logo />

@@ -9,11 +9,20 @@ function Hero(){
     backgroundSize: 'cover',
     backgroundRepeat: 'none',
     padding: 40,
-    textAlign: 'right'
+    display: 'flex',
+    justifyContent: 'flex-end'
 };
+  const heroText = {
+    textAlign: 'right',
+    fontFamily: 'Josefin Sans',
+    fontWeight: 'bold',
+    fontSize: 50,
+    width: '35%',
+    color: '#162E08'
+  }
   return (
     <div style={divStyle}>
-    lorem ipsum
+    <p style={heroText}>Only the best ciders in Portland</p>
 
     </div>
   );
