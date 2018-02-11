@@ -1,12 +1,12 @@
-import React from "react";
-import Logo from "./Logo";
-import Nav from "./Nav";
+import React from 'react';
+import Logo from './Logo';
+import Nav from './Nav';
 
 
 function Header(){
   return (
     <div>
-    <style jsx>{`
+      <style jsx>{`
           div {
             background-color: #26510d;
             height: 200px;
@@ -21,9 +21,9 @@ function Header(){
             font-weight: bold;
           }
         `}</style>
-    <Logo />
-    <h1>Portland's Cider Bar</h1>
-    <Nav />
+      <Logo />
+      <h1>Portland's Cider Bar</h1>
+      <Nav />
     </div>
 
   );

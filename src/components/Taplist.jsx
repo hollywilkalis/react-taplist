@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 import Tapcard from './Tapcard';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const masterTapList = [
   {
@@ -41,8 +41,8 @@ function Taplist(){
 
       <Grid>
         <Row className="show-grid">
-            {masterTapList.map((tapcard, index) =>
-              <Col xs={6} md={4}>
+          {masterTapList.map((tapcard, index) =>
+            <Col xs={6} md={4}>
               <Tapcard
                 name={tapcard.name}
                 brand={tapcard.brand}
@@ -51,8 +51,8 @@ function Taplist(){
                 amountRemaining={tapcard.amountRemaining}
                 key={index}
               />
-              </Col>
-            )}
+            </Col>
+          )}
         </Row>
       </Grid>
     </div>

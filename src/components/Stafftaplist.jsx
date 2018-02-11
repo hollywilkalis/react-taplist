@@ -1,7 +1,4 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Panel from 'react-bootstrap/lib/Panel';
-import Button from 'react-bootstrap/lib/Button';
+import React from 'react';
 import Stafftapdisplay from './Stafftapdisplay';
 
 const staffTapList = [
@@ -34,13 +31,13 @@ const staffTapList = [
     amountRemaining: 124
   }
 ];
-function Stafftaplist(props){
+function Stafftaplist(){
   return (
     <div>
-    <style jsx>{`
+      <style jsx>{`
       div {
         width: 50%;
-        padding: 20px
+        padding: 20px;
       }
 
       `}</style>

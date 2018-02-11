@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 
 function Footer(){
   const links = {
     color: '#ecf0f1',
-  }
+  };
   
   return (
     <div>
-    <style jsx>{`
+      <style jsx>{`
           div {
             background-color: #26510d;
             height: 100px;

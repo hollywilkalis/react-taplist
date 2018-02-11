@@ -1,12 +1,12 @@
-import React from "react";
-import Featured from "./Featured";
-import About from "./About";
-import Hero from "./Hero";
+import React from 'react';
+import Featured from './Featured';
+import About from './About';
+import Hero from './Hero';
 
 function Home(){
   return (
     <div>
-    <style jsx>{`
+      <style jsx>{`
       div {
         display: flex;
         flex-wrap: wrap;

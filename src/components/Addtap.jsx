@@ -1,16 +1,16 @@
-import React from "react";
-import Addtapform from "./Addtapform";
+import React from 'react';
+import Addtapform from './Addtapform';
 
 
 function Addtap(){
   return (
     <div>
-    <style jsx>{`
+      <style jsx>{`
       width: 50%;
       padding: 20px;
     `}</style>
 
-    <Addtapform />
+      <Addtapform />
     </div>
 
   );

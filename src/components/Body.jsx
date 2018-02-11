@@ -1,7 +1,7 @@
-import React from "react";
-import Home from "./Home";
-import Taplist from "./Taplist";
-import Admin from "./Admin";
+import React from 'react';
+import Home from './Home';
+import Taplist from './Taplist';
+import Admin from './Admin';
 import { Switch, Route } from 'react-router-dom';
 
 

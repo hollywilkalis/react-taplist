@@ -1,12 +1,12 @@
-import React from "react";
-import Stafftaplist from "./Stafftaplist";
-import Addtap from "./Addtap";
+import React from 'react';
+import Stafftaplist from './Stafftaplist';
+import Addtap from './Addtap';
 
 
 function Admin(){
   return (
     <div>
-    <style jsx>{`
+      <style jsx>{`
       div {
         display: flex;
         flex-wrap: wrap;

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Nav(props){
+function Nav(){
   var links = {
     color: '#ecf0f1',
-  }
+  };
   return (
     <div>
       <style jsx>{`

@@ -1,7 +1,7 @@
-import React from "react";
-import Header from "./Header";
-import Body from "./Body";
-import Footer from "./Footer";
+import React from 'react';
+import Header from './Header';
+import Body from './Body';
+import Footer from './Footer';
 
 
 function App(){
@@ -16,12 +16,12 @@ function App(){
         Link:visited {
           color: white;
         }
-      `}</style>
+      `}</style>;
   return (
     <div>
-    <Header />
-    <Body />
-    <Footer />
+      <Header />
+      <Body />
+      <Footer />
     </div>
   );
 }
