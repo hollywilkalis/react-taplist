@@ -6,7 +6,7 @@
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+This project uses React to create a taplist for a hypothetical bar. It allows customers to see the ciders currently available on tap, the number of pints remaining in the keg, the price, the alcohol content, and the brand. It also provides an admin view where staff to add and edit kegs (currently still in development). Future updates will allow modification of the view based on price and alcohol content.
 
 ## Setup/Installation Requirements
 
