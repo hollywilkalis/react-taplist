@@ -5,13 +5,13 @@ import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import PropTypes from 'prop-types';
 
-function Taplist(){
+function TapList(props){
   return (
     <div>
 
       <Grid>
         <Row className="show-grid">
-          {masterTapList.map((tapcard, index) =>
+          {props.tapList.map((tapcard, index) =>
             <Col xs={6} md={4}>
               <Tapcard
                 name={tapcard.name}
@@ -30,12 +30,8 @@ function Taplist(){
   );
 }
 
-Taplist.PropTypes = {
-  name: PropTypes.string,
-  brand: PropTypes.string,
-  price: PropTypes.number,
-  alcoholContent: PropTypes.number,
-  amountRemaining: PropTypes.amountRemaining
+TapList.PropTypes = {
+  tapList: PropTypes.array
 };
 
-export default Taplist;
+export default TapList;

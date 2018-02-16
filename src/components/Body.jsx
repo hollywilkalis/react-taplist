@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './Home';
-import Taplist from './Taplist';
+import TapList from './TapList';
 import Admin from './Admin';
 import { Switch, Route } from 'react-router-dom';
 
@@ -55,7 +55,7 @@ class Body extends React.Component {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/admin' render={()=><Admin onNewTapCreation={this.handleAddingNewTapToList} />}  />
-          <Route path='/taplist' component={Taplist} />
+          <Route path='/taplist' render={()=><TapList tapList={this.state.masterTapList} />} />
         </Switch>
       </div>
     );
