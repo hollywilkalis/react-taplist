@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/lib/Button';
 
 
-function Addtapform(){
+function AddTapForm(props){
   return (
     <div>
       <style jsx>{`
@@ -40,4 +40,4 @@ function Addtapform(){
   );
 }
 
-export default Addtapform;
+export default AddTapForm;

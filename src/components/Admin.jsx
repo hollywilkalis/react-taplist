@@ -1,27 +1,37 @@
 import React from 'react';
 import Stafftaplist from './Stafftaplist';
-import Addtap from './Addtap';
+import AddTapForm from './AddTapForm';
+import PropTypes from 'prop-types';
 
 
-function Admin(){
-  return (
-    <div>
-      <style jsx>{`
-      div {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      h1 {
-        color: white;
-      }
-    `}</style>
-      <Stafftaplist />
-      <Addtap />
+class Admin extends React.Component {
 
-    </div>
+  render(){
+    return (
+      <div>
 
-  );
+        <style jsx>{`
+          div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          }
+          h1 {
+            color: white;
+          }
+        `}</style>
+        
+        <Stafftaplist />
+        <AddTapForm onNewTapCreation={this.props.onNewTapCreation}/>
+
+      </div>
+
+    );
+  }
 }
+
+Admin.PropTypes = {
+  onNewTapCreation: PropTypes.func
+};
 
 export default Admin;

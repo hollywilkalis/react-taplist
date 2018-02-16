@@ -40,13 +40,21 @@ class Body extends React.Component {
         }
       ]
     };
+    this.handleAddingNewTapToList = this.handleAddingNewTapToList.bind(this);
   }
+
+  handleAddingNewTapToList(newTap) {
+    let newMasterTapList = this.state.masterTapList.slice();
+    newMasterTapList.push(newTap);
+    this.setState({masterTapList: newMasterTapList});
+  }
+
   render(){
     return (
       <div>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/admin' component={Admin} />
+          <Route path='/admin' render={()=><Admin onNewTapCreation={this.handleAddingNewTapToList} />}  />
           <Route path='/taplist' component={Taplist} />
         </Switch>
       </div>
