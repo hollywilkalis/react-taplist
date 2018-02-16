@@ -10,11 +10,11 @@ import { v4 } from 'uuid';
 function TapList(props){
   console.log(props.tapList);
   return (
-    <div>
 
+    <div>
       <Grid>
         <Row className="show-grid">
-          {props.tapList.map((tapcard, index) =>
+          {props.tapList.map((tapcard) =>
             <Col xs={6} md={4}>
               <Tapcard
                 name={tapcard.name}
@@ -22,19 +22,20 @@ function TapList(props){
                 price={tapcard.price}
                 alcoholContent={tapcard.alcoholContent}
                 amountRemaining={tapcard.amountRemaining}
-                key={tapcard.id}/>
+                currentRouterPath={props.currentRouterPath}
+                id={tapcard.id}/>
 
             </Col>
           )}
         </Row>
       </Grid>
     </div>
-
   );
 }
 
 TapList.PropTypes = {
-  tapList: PropTypes.array
+  tapList: PropTypes.array,
+  currentRouterPath: PropTypes.string
 };
 
 export default TapList;

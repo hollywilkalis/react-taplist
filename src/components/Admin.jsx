@@ -1,6 +1,7 @@
 import React from 'react';
 import AddTapForm from './AddTapForm';
 import PropTypes from 'prop-types';
+import TapList from './TapList';
 
 
 class Admin extends React.Component {
@@ -13,10 +14,10 @@ class Admin extends React.Component {
   render(){
     if (this.state.formVisibleOnPage) {
       return (
-        <div>
+        <div className="admin-display">
 
           <style jsx>{`
-            div {
+            .admin-display {
               display: flex;
               flex-wrap: wrap;
               justify-content: space-between;
@@ -24,9 +25,17 @@ class Admin extends React.Component {
             h1 {
               color: white;
             }
-          `}</style>
+            .half {
+              width: 50%;
+            }
 
-          <AddTapForm onNewTapCreation={this.props.onNewTapCreation}/>
+          `}</style>
+          <div className="half">
+            <AddTapForm onNewTapCreation={this.props.onNewTapCreation}/>
+          </div>
+          <div className="half">
+            <TapList tapList={this.props.tapList}/>
+          </div>
 
         </div>
 
@@ -36,7 +45,9 @@ class Admin extends React.Component {
 }
 
 Admin.PropTypes = {
-  onNewTapCreation: PropTypes.func
+  onNewTapCreation: PropTypes.func,
+  tapList: PropTypes.array
+
 };
 
 export default Admin;

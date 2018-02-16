@@ -60,7 +60,7 @@ class Body extends React.Component {
       <div>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/admin' render={()=><Admin onNewTapCreation={this.handleAddingNewTapToList}  />}  />
+          <Route path='/admin' render={()=><Admin tapList={this.state.masterTapList} onNewTapCreation={this.handleAddingNewTapToList} />}  />
           <Route path='/taplist' render={()=><TapList tapList={this.state.masterTapList} />} />
         </Switch>
       </div>

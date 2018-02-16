@@ -33,7 +33,7 @@ Tapcard.PropTypes = {
   brand: PropTypes.string,
   price: PropTypes.number,
   alcoholContent: PropTypes.number,
-  amountRemaining: PropTypes.amountRemaining,
+  amountRemaining: PropTypes.number,
   key: PropTypes.string
 };
 
