@@ -20,6 +20,7 @@ function AddTapForm(props){
     _price = '';
     _alcoholContent = '';
     _amountRemaining = '';
+    alert('Your new {_name} tap has been added!');
   }
 
   return (

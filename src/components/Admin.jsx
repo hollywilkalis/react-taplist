@@ -1,5 +1,4 @@
 import React from 'react';
-import Stafftaplist from './Stafftaplist';
 import AddTapForm from './AddTapForm';
 import PropTypes from 'prop-types';
 
@@ -27,7 +26,6 @@ class Admin extends React.Component {
             }
           `}</style>
 
-          <Stafftaplist />
           <AddTapForm onNewTapCreation={this.props.onNewTapCreation}/>
 
         </div>
