@@ -4,19 +4,18 @@ import { Link } from 'react-router-dom';
 
 function Footer(){
   const links = {
-    color: '#ecf0f1',
+    color: 'black',
   };
-  
+
   return (
     <div>
       <style jsx>{`
           div {
-            background-color: #26510d;
             height: 100px;
           }
           p {
             font-size: 12px;
-            color: white;
+            color: black;
             text-align: right;
             padding: 10px;
           }

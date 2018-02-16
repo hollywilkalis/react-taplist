@@ -1,8 +1,5 @@
 import React from 'react';
 import Tapcard from './Tapcard';
-import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
@@ -18,18 +15,25 @@ function TapList(props){
         .clearfix {
           overflow: auto;
         }
+        h3 {
+          color: #26510d;
+          text-align: center;
+          font-size: 30px;
+          font-family: 'Josefin Sans';
+        }
         `}</style>
+      <h3>Our current taps</h3>
 
-          {props.tapList.map((tapcard) =>
-              <Tapcard
-                name={tapcard.name}
-                brand={tapcard.brand}
-                price={tapcard.price}
-                alcoholContent={tapcard.alcoholContent}
-                amountRemaining={tapcard.amountRemaining}
-                currentRouterPath={props.currentRouterPath}
-                id={tapcard.id}/>
-          )}
+      {props.tapList.map((tapcard) =>
+        <Tapcard
+          name={tapcard.name}
+          brand={tapcard.brand}
+          price={tapcard.price}
+          alcoholContent={tapcard.alcoholContent}
+          amountRemaining={tapcard.amountRemaining}
+          currentRouterPath={props.currentRouterPath}
+          id={tapcard.id}/>
+      )}
 
     </div>
   );

@@ -33,17 +33,13 @@ class Admin extends React.Component {
             .tap-display {
               width: 60%;
             }
-            h3 {
-              color: #26510d;
-              margin-left: 20px;
-            }
+
 
           `}</style>
           <div className="tap-form">
             <AddTapForm onNewTapCreation={this.props.onNewTapCreation}/>
           </div>
           <div className="tap-display">
-            <h3>Current taps</h3>
             <TapList tapList={this.props.tapList}
             currentRouterPath={this.props.currentRouterPath}/>
           </div>
