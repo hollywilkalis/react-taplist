@@ -15,7 +15,7 @@ function StaffTapList(props){
       `}</style>
       <h2>Our current taps</h2>
       {props.staffTapList.map((stafftapdisplay, index) =>
-        <StaffTapDisplay
+        <StaffTapDisplay onSellingAPint={this.handleSellingAPint}
           name={stafftapdisplay.name}
           brand={stafftapdisplay.brand}
           price={stafftapdisplay.price}

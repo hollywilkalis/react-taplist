@@ -3,6 +3,7 @@ import Home from './Home';
 import TapList from './TapList';
 import Admin from './Admin';
 import { Switch, Route } from 'react-router-dom';
+import { v4 } from 'uuid';
 
 
 class Body extends React.Component {
@@ -15,28 +16,32 @@ class Body extends React.Component {
           brand: '2 Towns',
           price: 4,
           alcoholContent: 6,
-          amountRemaining: 124
+          amountRemaining: 124,
+          id: v4()
         },
         {
           name: 'Boysenberry Lemonade',
           brand: 'Baumans',
           price: 6,
           alcoholContent: 6.2,
-          amountRemaining: 124
+          amountRemaining: 124,
+          id: v4()
         },
         {
           name: 'Poire',
           brand: 'Christian Drouin',
           price: 5,
           alcoholContent: 4,
-          amountRemaining: 124
+          amountRemaining: 124,
+          id: v4()
         },
         {
           name: 'Oregon Wild',
           brand: 'Portland Cider Company',
           price: 8,
           alcoholContent: 5.8,
-          amountRemaining: 124
+          amountRemaining: 124,
+          id: v4()
         }
       ]
     };
@@ -49,12 +54,13 @@ class Body extends React.Component {
     this.setState({masterTapList: newMasterTapList});
   }
 
+
   render(){
     return (
       <div>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/admin' render={()=><Admin onNewTapCreation={this.handleAddingNewTapToList}tapList={this.state.masterTapList} /> }  />
+          <Route path='/admin' render={()=><Admin onNewTapCreation={this.handleAddingNewTapToList}  />}  />
           <Route path='/taplist' render={()=><TapList tapList={this.state.masterTapList} />} />
         </Switch>
       </div>

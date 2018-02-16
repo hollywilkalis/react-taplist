@@ -4,8 +4,6 @@ import Panel from 'react-bootstrap/lib/Panel';
 import Button from 'react-bootstrap/lib/Button';
 
 
-
-
 function Tapcard(props){
   return (
     <div>
@@ -35,7 +33,8 @@ Tapcard.PropTypes = {
   brand: PropTypes.string,
   price: PropTypes.number,
   alcoholContent: PropTypes.number,
-  amountRemaining: PropTypes.amountRemaining
+  amountRemaining: PropTypes.amountRemaining,
+  key: PropTypes.string
 };
 
 export default Tapcard;

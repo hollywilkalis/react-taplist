@@ -4,8 +4,11 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
+
 
 function TapList(props){
+  console.log(props.tapList);
   return (
     <div>
 
@@ -19,8 +22,8 @@ function TapList(props){
                 price={tapcard.price}
                 alcoholContent={tapcard.alcoholContent}
                 amountRemaining={tapcard.amountRemaining}
-                key={index}
-              />
+                key={tapcard.id}/>
+
             </Col>
           )}
         </Row>

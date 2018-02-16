@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/lib/Button';
 import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
 
 function AddTapForm(props){
@@ -14,27 +15,32 @@ function AddTapForm(props){
   function handleAddTapFormSubmission(event) {
     event.preventDefault();
 
-    props.onNewTapCreation({name: _name.value, brand: _brand.value, price: _price.value, alcoholContent: _alcoholContent.value, amountRemaining: _amountRemaining.value});
+    props.onNewTapCreation({name: _name.value, brand: _brand.value, price: _price.value, alcoholContent: _alcoholContent.value, amountRemaining: _amountRemaining.value, id: v4()});
     _name.value = '';
     _brand = '';
     _price = '';
     _alcoholContent = '';
     _amountRemaining = '';
-    alert('Your new {_name} tap has been added!');
+    alert('Your new tap has been added!');
   }
 
   return (
     <div>
       <style jsx>{`
         div {
+          width: 60%;
           padding: 20px
           border: solid 1px gray;
           }
         input {
           width: 100%;
+          margin-bottom: 10px;
         }
         label {
           margin-top: 15px;
+        }
+        Button {
+          margin-top: 10px;
         }
       `}</style>
       <form onSubmit={handleAddTapFormSubmission}>
