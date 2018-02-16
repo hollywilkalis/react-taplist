@@ -5,27 +5,32 @@ import Button from 'react-bootstrap/lib/Button';
 
 
 function Tapcard(props){
-  return (
+  const tapInformation =
     <div>
-      <style jsx>{`
-        div {
-          margin-top: 10px;
-        }
 
-      `}</style>
-      <Panel>
-        <Panel.Heading>{props.brand}</Panel.Heading>
-        <Panel.Body>
+        {props.brand}
           <h3>{props.name}</h3>
           <p>Alcohol Content: {props.alcoholContent}<br/>
             Price: {props.price}<br/>
             Amount remaining in keg: {props.amountRemaining}</p>
           <Button bsStyle="success">Sell a pint</Button>
-        </Panel.Body>
-      </Panel>
-    </div>
 
-  );
+    </div>;
+  if (props.currentRouterPath === '/admin'){
+    return (
+      <div>
+      hey, you just found the route belongin to Admin
+      {tapInformation}
+
+      </div>
+      );
+  } else {
+    return (
+      <div>
+        {tapInformation}
+      </div>
+    );
+  }
 }
 
 Tapcard.PropTypes = {
@@ -34,7 +39,9 @@ Tapcard.PropTypes = {
   price: PropTypes.number,
   alcoholContent: PropTypes.number,
   amountRemaining: PropTypes.number,
-  key: PropTypes.string
+  key: PropTypes.string,
+  location: PropTypes.string.isRequired,
+  currentRouterPath: PropTypes.string
 };
 
 export default Tapcard;

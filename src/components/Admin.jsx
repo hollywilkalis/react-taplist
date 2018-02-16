@@ -5,12 +5,14 @@ import TapList from './TapList';
 
 
 class Admin extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
       formVisibleOnPage: true
     };
   }
+
   render(){
     if (this.state.formVisibleOnPage) {
       return (
@@ -34,7 +36,8 @@ class Admin extends React.Component {
             <AddTapForm onNewTapCreation={this.props.onNewTapCreation}/>
           </div>
           <div className="half">
-            <TapList tapList={this.props.tapList}/>
+            <TapList tapList={this.props.tapList}
+            currentRouterPath={this.props.currentRouterPath}/>
           </div>
 
         </div>
@@ -46,7 +49,8 @@ class Admin extends React.Component {
 
 Admin.PropTypes = {
   onNewTapCreation: PropTypes.func,
-  tapList: PropTypes.array
+  tapList: PropTypes.array,
+  currentRouterPath: PropTypes.string.isRequired
 
 };
 

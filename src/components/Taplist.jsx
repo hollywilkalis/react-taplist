@@ -35,6 +35,7 @@ function TapList(props){
 
 TapList.PropTypes = {
   tapList: PropTypes.array,
+  location: PropTypes.object,
   currentRouterPath: PropTypes.string
 };
 
