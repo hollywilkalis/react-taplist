@@ -21,14 +21,12 @@ function AddTapForm(props){
     _price = '';
     _alcoholContent = '';
     _amountRemaining = '';
-    alert('Your new tap has been added!');
   }
 
   return (
     <div>
       <style jsx>{`
         div {
-          width: 60%;
           padding: 20px
           border: solid 1px gray;
           }

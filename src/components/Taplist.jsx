@@ -8,14 +8,19 @@ import { v4 } from 'uuid';
 
 
 function TapList(props){
-  console.log(props.tapList);
   return (
 
-    <div>
-      <Grid>
-        <Row className="show-grid">
+    <div className="clearfix">
+      <style jsx>{`
+        div {
+          padding: 10px;
+        }
+        .clearfix {
+          overflow: auto;
+        }
+        `}</style>
+
           {props.tapList.map((tapcard) =>
-            <Col xs={6} md={4}>
               <Tapcard
                 name={tapcard.name}
                 brand={tapcard.brand}
@@ -24,11 +29,8 @@ function TapList(props){
                 amountRemaining={tapcard.amountRemaining}
                 currentRouterPath={props.currentRouterPath}
                 id={tapcard.id}/>
-
-            </Col>
           )}
-        </Row>
-      </Grid>
+
     </div>
   );
 }

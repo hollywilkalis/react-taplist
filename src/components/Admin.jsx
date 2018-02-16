@@ -22,20 +22,28 @@ class Admin extends React.Component {
             .admin-display {
               display: flex;
               flex-wrap: wrap;
-              justify-content: space-between;
             }
             h1 {
               color: white;
             }
-            .half {
-              width: 50%;
+            .tap-form {
+              width: 40%;
+              min-width: 250px;
+            }
+            .tap-display {
+              width: 60%;
+            }
+            h3 {
+              color: #26510d;
+              margin-left: 20px;
             }
 
           `}</style>
-          <div className="half">
+          <div className="tap-form">
             <AddTapForm onNewTapCreation={this.props.onNewTapCreation}/>
           </div>
-          <div className="half">
+          <div className="tap-display">
+            <h3>Current taps</h3>
             <TapList tapList={this.props.tapList}
             currentRouterPath={this.props.currentRouterPath}/>
           </div>
