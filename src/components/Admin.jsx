@@ -40,7 +40,7 @@ class Admin extends React.Component {
           `}</style>
           <div className="tap-display">
             <TapList tapList={this.props.tapList}
-            currentRouterPath={this.props.currentRouterPath}/>
+              currentRouterPath={this.props.currentRouterPath}/>
           </div>
           <div className="tap-form">
             <AddTapForm onNewTapCreation={this.props.onNewTapCreation}/>

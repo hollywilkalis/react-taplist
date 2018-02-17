@@ -11,7 +11,7 @@ function Tapcard(props){
       <p>Alcohol Content: {props.alcoholContent}<br/>
       Price: {props.price}<br/>
       Amount remaining in keg: {props.amountRemaining}</p>
-      <Button bsStyle="success">Sell a pint</Button>
+      <Button bsStyle="success" onClick={props.onPour}>Sell a pint</Button>
     </div>;
 
   if (props.currentRouterPath === '/admin'){
@@ -25,28 +25,27 @@ function Tapcard(props){
           `}</style>
         <li>{props.brand}, {props.name}, {props.amountRemaining} pints remaining in keg</li>
       </div>
-      );
+    );
   } else {
     return (
       <div className="tap-card">
-      <style jsx>{`
-          div {
-            padding: 10px;
-            float: left;
-          }
-          .tap-card {
-            border: solid 2px #26510d;
-            margin: 10px;
-            border-radius: 20px;
-            padding: 20px;
-            m
-          }
-          h1 {
-            color: white;
-            font-family: 'Josefin Sans', sans-serif;
-            font-weight: bold;
-          }
-        `}</style>
+        <style jsx>{`
+            div {
+              padding: 10px;
+              float: left;
+            }
+            .tap-card {
+              border: solid 2px #26510d;
+              margin: 10px;
+              border-radius: 20px;
+              padding: 20px;
+            }
+            h1 {
+              color: white;
+              font-family: 'Josefin Sans', sans-serif;
+              font-weight: bold;
+            }
+          `}</style>
         {tapInformation}
       </div>
     );

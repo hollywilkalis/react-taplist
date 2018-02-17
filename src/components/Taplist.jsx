@@ -23,7 +23,6 @@ function TapList(props){
         }
         `}</style>
       <h3>Our current taps</h3>
-
       {props.tapList.map((tapcard) =>
         <Tapcard
           name={tapcard.name}
@@ -32,7 +31,9 @@ function TapList(props){
           alcoholContent={tapcard.alcoholContent}
           amountRemaining={tapcard.amountRemaining}
           currentRouterPath={props.currentRouterPath}
-          id={tapcard.id}/>
+          onPour={props.onPour}
+          id={tapcard.id}
+          />
       )}
 
     </div>
@@ -42,7 +43,8 @@ function TapList(props){
 TapList.PropTypes = {
   tapList: PropTypes.array,
   location: PropTypes.object,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onPour: PropTypes.func
 };
 
 export default TapList;

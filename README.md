@@ -1,12 +1,12 @@
 # Tap List
 
-#### Tap list for hypothetical cider house, demonstrating use of React components, February 9, 2018
+#### Tap list for hypothetical cider house, demonstrating use of React components, February 9 and 116, 2018
 
 #### By Holly Wilkalis
 
 ## Description
 
-This project uses React to create a taplist for a hypothetical bar. It allows customers to see the ciders currently available on tap, the number of pints remaining in the keg, the price, the alcohol content, and the brand. It also provides an admin view where staff to add and edit kegs (currently still in development). Future updates will allow modification of the view based on price and alcohol content.
+This project uses React to create a taplist for a hypothetical bar. It allows customers to see the ciders currently available on tap, the number of pints remaining in the keg, the price, the alcohol content, and the brand. It also provides an admin view for staff to add, edit, and delete kegs (The add function works but edit and delete are still in development). Future updates will allow conditional rendering of the view based on price and alcohol content.
 
 ## Setup/Installation Requirements
 
@@ -45,7 +45,8 @@ Diagram of the project flow:
 You can also find my planning sketches of the app views in the app-sketches folder.
 
 Issues
-* I had planned to reuse the hardcoded master taplist in two places: on the admin view and the taplist view. I didn't succeed in figuring this out by the end of the day so I wound up hardcoding it into two different components. Obviously this could be drier but I'm sure we'll get further into this soon.
+* I made a lot of work for myself with my initial component structure - I flattened it a little in a couple of places to make passing data less complex.
+* I had planned to reuse the hardcoded master taplist in two places: on the admin view and the taplist view. I didn't succeed in figuring this out by the end of the day so I wound up hardcoding it into two different components. Obviously this could be drier but I'm sure we'll get further into this soon. RESOLVED - all components are now drawing from and updating the same master list.
 * I tried my best to determine all of the needed components at the beginning of the project, and came close, but did find that I needed to create a few more than originally planned. Wasn't a big deal to add them, but it did help me get a better handle on breakdown for future projects.
 * I had a little trouble setting up Bootstrap and did eventually realize that React-Bootstrap is still based on an earlier version than the one we've been working with, which was frustrating but manageable once i found their documentation.
 * Using local images was glitchy and I don't yet know why. Twice during the day images that were displaying fine suddenly stopped, and it took deleting and re-adding the images several times to get the app to recognize them again.

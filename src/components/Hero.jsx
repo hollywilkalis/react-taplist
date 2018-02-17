@@ -18,7 +18,7 @@ function Hero(){
     fontFamily: 'Josefin Sans',
     fontWeight: 'bold',
     fontSize: 50,
-    width: '35%',
+    width: '40%',
     color: '#162E08'
   };
   return (
