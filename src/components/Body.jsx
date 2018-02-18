@@ -43,7 +43,8 @@ class Body extends React.Component {
           amountRemaining: 124,
           id: v4()
         }
-      ]
+      ],
+      selectedTap: null
     };
     this.handleAddingNewTapToList = this.handleAddingNewTapToList.bind(this);
     this.handlePintPour = this.handlePintPour.bind(this);
@@ -55,12 +56,10 @@ class Body extends React.Component {
     this.setState({masterTapList: newMasterTapList});
   }
 
-  handlePintPour() {
-    let newMasterTapList = this.state.masterTapList.slice();
-    newMasterTapList.amountRemaining -= 1;
-    this.setState({masterTapList: newMasterTapList});
-    alert('pint is poured');
-    console.log(this.state.newMasterTapList.amountRemaining);
+  handlePintPour(tap) {
+    this.setState({selectedTap: tap});
+    this.state.selectedTap.amountRemaining -= 1;
+    alert(this.state.selectedTap.amountRemaining);
   }
 
   render(){
@@ -70,7 +69,8 @@ class Body extends React.Component {
           <Route exact path='/' component={Home} />
           <Route path='/admin' render={(props)=><Admin
             currentRouterPath={props.location.pathname} tapList={this.state.masterTapList} onNewTapCreation={this.handleAddingNewTapToList} />}  />
-          <Route path='/taplist' render={()=><TapList tapList={this.state.masterTapList} onPour={this.handlePintPour} />} />
+          <Route path='/taplist' render={(props)=><TapList   tapList={this.state.masterTapList}    onPour={this.handlePintPour}
+          selectedTap={this.state.selectedTap} />} />
         </Switch>
       </div>
     );

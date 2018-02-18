@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/lib/Button';
 
 
 function Tapcard(props){
+
   const tapInformation =
     <div>
       <h4>{props.brand}</h4>
@@ -13,6 +14,7 @@ function Tapcard(props){
       Amount remaining in keg: {props.amountRemaining}</p>
       <Button bsStyle="success" onClick={props.onPour}>Sell a pint</Button>
     </div>;
+
 
   if (props.currentRouterPath === '/admin'){
     return (
@@ -46,13 +48,16 @@ function Tapcard(props){
               font-weight: bold;
             }
           `}</style>
+
+        <div onClick={() => {props.onPour({amountRemaining: props.amountRemaining});}}>
         {tapInformation}
+        </div>
       </div>
     );
   }
 }
 
-Tapcard.PropTypes = {
+Tapcard.propTypes = {
   name: PropTypes.string,
   brand: PropTypes.string,
   price: PropTypes.number,
@@ -60,7 +65,8 @@ Tapcard.PropTypes = {
   amountRemaining: PropTypes.number,
   key: PropTypes.string,
   location: PropTypes.string.isRequired,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onPour: PropTypes.func
 };
 
 export default Tapcard;

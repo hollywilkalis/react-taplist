@@ -5,6 +5,7 @@ import { v4 } from 'uuid';
 
 
 function TapList(props){
+
   return (
 
     <div className="clearfix">
@@ -44,7 +45,9 @@ TapList.PropTypes = {
   tapList: PropTypes.array,
   location: PropTypes.object,
   currentRouterPath: PropTypes.string,
-  onPour: PropTypes.func
+  selectedTap: PropTypes.object,
+  onPour: PropTypes.func.isRequired,
+
 };
 
 export default TapList;
