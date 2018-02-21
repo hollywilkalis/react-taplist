@@ -34,7 +34,7 @@ function TapList(props){
                     amountRemaining={tapcard.amountRemaining}
                     currentRouterPath={props.currentRouterPath}
                     onPour={props.onPour}
-                    key={tapcard.id}
+                    tapId={tapcard.id}
                     selectedTap={props.selectedTap} />;
             })}
         </div>
@@ -47,6 +47,7 @@ TapList.PropTypes = {
     currentRouterPath: PropTypes.string,
     selectedTap: PropTypes.object,
     onPour: PropTypes.func.isRequired,
+    tapId: PropTypes.string.isRequired
 };
 
 export default TapList;

@@ -10,7 +10,36 @@ class Body extends React.Component {
     constructor(props) {
       super(props) ;
       this.state = {
-      masterTapList: {},
+      masterTapList: {
+        1: {
+          name: 'Made Marion',
+          brand: '2 Towns',
+          price: 4,
+          alcoholContent: 6,
+          amountRemaining: 124,
+        },
+        2: {
+          name: 'Boysenberry Lemonade',
+          brand: 'Baumans',
+          price: 6,
+          alcoholContent: 6.2,
+          amountRemaining: 124,
+        },
+        3: {
+          name: 'Poire',
+          brand: 'Christian Drouin',
+          price: 5,
+          alcoholContent: 4,
+          amountRemaining: 124,
+        },
+        4: {
+          name: 'Oregon Wild',
+          brand: 'Portland Cider Company',
+          price: 8,
+          alcoholContent: 5.8,
+          amountRemaining: 124,
+        }
+      },
       selectedTap: null
     };
     this.handleAddingNewTapToList = this.handleAddingNewTapToList.bind(this);
@@ -24,12 +53,13 @@ class Body extends React.Component {
     this.setState({masterTapList: newMasterTapList});
   }
 
-  handlePintPour(tap) {
-    this.setState({selectedTap: tap});
+  handlePintPour(tapId) {
+    this.setState({selectedTap: tapId});
     alert("poured!");
   }
 
   render(){
+    console.log(this.state.masterTapList);
     return (
       <div>
         <Switch>

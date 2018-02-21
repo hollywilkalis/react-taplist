@@ -5,16 +5,16 @@ import Button from 'react-bootstrap/lib/Button';
 
 function Tapcard(props){
 
-    const tapInformation =
+  const tapInformation =
     <div>
-        <h4>{props.brand}</h4>
-        <h3>{props.name}</h3>
-        <p>Alcohol Content: {props.alcoholContent}<br/>
-        Price: {props.price}<br/>
-        Amount remaining in keg: {props.amountRemaining}</p>
-        <Button bsStyle="success"
-            onClick={() =>
-            {props.onPour(props.key);}}>
+      <h4>{props.brand}</h4>
+      <h3>{props.name}</h3>
+      <p>Alcohol Content: {props.alcoholContent}<br/>
+      Price: {props.price}<br/>
+      Amount remaining in keg: {props.amountRemaining}</p>
+      <Button bsStyle="success"
+        onClick={() =>
+        {props.onPour(props.key);}}>
         Sell a pint</Button>
     </div>;
 
@@ -52,7 +52,7 @@ function Tapcard(props){
             }
           `}</style>
 
-        <div onClick={() => {props.onPour({amountRemaining: props.amountRemaining});}}>
+        <div onClick={() => {props.onPour(props.tapcardId);}}>
         {tapInformation}
         </div>
       </div>
@@ -61,15 +61,16 @@ function Tapcard(props){
 }
 
 Tapcard.propTypes = {
-  name: PropTypes.string,
-  brand: PropTypes.string,
-  price: PropTypes.number,
-  alcoholContent: PropTypes.number,
-  amountRemaining: PropTypes.number,
-  key: PropTypes.string,
-  location: PropTypes.string.isRequired,
-  currentRouterPath: PropTypes.string,
-  onPour: PropTypes.func
+    name: PropTypes.string,
+    brand: PropTypes.string,
+    price: PropTypes.number,
+    alcoholContent: PropTypes.number,
+    amountRemaining: PropTypes.number,
+    key: PropTypes.string,
+    location: PropTypes.string.isRequired,
+    currentRouterPath: PropTypes.string,
+    onPour: PropTypes.func,
+
 };
 
 export default Tapcard;
