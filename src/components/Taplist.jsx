@@ -47,7 +47,6 @@ TapList.PropTypes = {
     currentRouterPath: PropTypes.string,
     selectedTap: PropTypes.object,
     onPour: PropTypes.func.isRequired,
-
 };
 
 export default TapList;

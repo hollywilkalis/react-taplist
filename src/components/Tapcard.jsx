@@ -5,14 +5,17 @@ import Button from 'react-bootstrap/lib/Button';
 
 function Tapcard(props){
 
-  const tapInformation =
+    const tapInformation =
     <div>
-      <h4>{props.brand}</h4>
-      <h3>{props.name}</h3>
-      <p>Alcohol Content: {props.alcoholContent}<br/>
-      Price: {props.price}<br/>
-      Amount remaining in keg: {props.amountRemaining}</p>
-      <Button bsStyle="success" onClick={props.onPour}>Sell a pint</Button>
+        <h4>{props.brand}</h4>
+        <h3>{props.name}</h3>
+        <p>Alcohol Content: {props.alcoholContent}<br/>
+        Price: {props.price}<br/>
+        Amount remaining in keg: {props.amountRemaining}</p>
+        <Button bsStyle="success"
+            onClick={() =>
+            {props.onPour(props.key);}}>
+        Sell a pint</Button>
     </div>;
 
 
