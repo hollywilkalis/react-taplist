@@ -10,7 +10,7 @@ class Body extends React.Component {
   constructor(props) {
     super(props) ;
     this.state = {
-      masterTapList: [
+      masterTapList: {
         {
           name: 'Made Marion',
           brand: '2 Towns',
@@ -43,7 +43,7 @@ class Body extends React.Component {
           amountRemaining: 124,
           id: v4()
         }
-      ],
+      },
       selectedTap: null
     };
     this.handleAddingNewTapToList = this.handleAddingNewTapToList.bind(this);
@@ -51,8 +51,9 @@ class Body extends React.Component {
   }
 
   handleAddingNewTapToList(newTap) {
-    let newMasterTapList = this.state.masterTapList.slice();
-    newMasterTapList.push(newTap);
+    let newMasterTapList = Object.assign({},
+      [newTap.id]: newTap)
+    });
     this.setState({masterTapList: newMasterTapList});
   }
 

@@ -1,7 +1,7 @@
 {
   "name": "react-taplist",
   "version": "1.0.0",
-  "description": "",
+  "description": "#### Tap list for hypothetical cider house, demonstrating use of React components, February 9 and 116, 2018",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/** src/**/**; exit 0",
@@ -38,7 +38,7 @@
     "babel-preset-react": "^6.24.1",
     "eslint": "^4.17.0",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-react": "^7.6.1",
+    "eslint-plugin-react": "^7.7.0",
     "html-webpack-plugin": "^2.29.0",
     "react-hot-loader": "^3.0.0-beta.7",
     "webpack": "^3.4.0",
