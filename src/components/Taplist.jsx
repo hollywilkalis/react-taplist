@@ -8,7 +8,7 @@ function TapList(props){
 
   return (
 
-    <div className="clearfix">
+  <div className="clearfix">
       <style jsx>{`
         div {
           padding: 10px;
@@ -23,30 +23,30 @@ function TapList(props){
           font-family: 'Josefin Sans';
         }
         `}</style>
-      <h3>Our current taps</h3>
-      {props.tapList.map((tapcard) =>
-        <Tapcard
-          name={tapcard.name}
-          brand={tapcard.brand}
-          price={tapcard.price}
-          alcoholContent={tapcard.alcoholContent}
-          amountRemaining={tapcard.amountRemaining}
-          currentRouterPath={props.currentRouterPath}
-          onPour={props.onPour}
-          id={tapcard.id}
-          />
-      )}
-
-    </div>
-  );
+            <h3>Our current taps</h3>
+            {Object.keys(props.tapList).map(function(tapId) {
+                var tapcard = props.tapList[tapId];
+                return <Tapcard
+                    name={tapcard.name}
+                    brand={tapcard.brand}
+                    price={tapcard.price}
+                    alcoholContent={tapcard.alcoholContent}
+                    amountRemaining={tapcard.amountRemaining}
+                    currentRouterPath={props.currentRouterPath}
+                    onPour={props.onPour}
+                    key={tapcard.id}
+                    selectedTap={props.selectedTap} />;
+            })}
+        </div>
+    );
 }
 
 TapList.PropTypes = {
-  tapList: PropTypes.array,
-  location: PropTypes.object,
-  currentRouterPath: PropTypes.string,
-  selectedTap: PropTypes.object,
-  onPour: PropTypes.func.isRequired,
+    tapList: PropTypes.object,
+    location: PropTypes.object,
+    currentRouterPath: PropTypes.string,
+    selectedTap: PropTypes.object,
+    onPour: PropTypes.func.isRequired,
 
 };
 
