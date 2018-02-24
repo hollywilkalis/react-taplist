@@ -14,7 +14,7 @@ function Tapcard(props){
       Amount remaining in keg: {props.amountRemaining}</p>
       <Button bsStyle="success"
         onClick={() =>
-        {props.onPour(props.key);}}>
+        {props.onPour(props.tapId);}}>
         Sell a pint</Button>
     </div>;
 
@@ -52,8 +52,8 @@ function Tapcard(props){
             }
           `}</style>
 
-        <div onClick={() => {props.onPour(props.tapcardId);}}>
-        {tapInformation}
+        <div onClick={() => {props.onPour(props.tapId);}}>
+          {tapInformation}
         </div>
       </div>
     );
@@ -61,15 +61,15 @@ function Tapcard(props){
 }
 
 Tapcard.propTypes = {
-    name: PropTypes.string,
-    brand: PropTypes.string,
-    price: PropTypes.number,
-    alcoholContent: PropTypes.number,
-    amountRemaining: PropTypes.number,
-    key: PropTypes.string,
-    location: PropTypes.string.isRequired,
-    currentRouterPath: PropTypes.string,
-    onPour: PropTypes.func,
+  name: PropTypes.string,
+  brand: PropTypes.string,
+  price: PropTypes.number,
+  alcoholContent: PropTypes.number,
+  amountRemaining: PropTypes.number,
+  key: PropTypes.string,
+  location: PropTypes.string,
+  currentRouterPath: PropTypes.string,
+  onPour: PropTypes.func,
 
 };
 

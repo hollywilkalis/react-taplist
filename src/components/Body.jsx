@@ -7,9 +7,9 @@ import { v4 } from 'uuid';
 
 
 class Body extends React.Component {
-    constructor(props) {
-      super(props) ;
-      this.state = {
+  constructor(props) {
+    super(props) ;
+    this.state = {
       masterTapList: {
         1: {
           name: 'Made Marion',
@@ -47,27 +47,31 @@ class Body extends React.Component {
   }
 
   handleAddingNewTapToList(newTap) {
+    var newTapId = v4();
     let newMasterTapList = Object.assign({}, this.state.masterTapList, {
-      [newTap.id]: newTap
+      [newTapId]: newTap
     });
     this.setState({masterTapList: newMasterTapList});
   }
 
   handlePintPour(tapId) {
     this.setState({selectedTap: tapId});
-    alert("poured!");
+    console.log(tapId);
+
   }
 
   render(){
-    console.log(this.state.masterTapList);
     return (
       <div>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route path='/admin' render={(props)=><Admin
             currentRouterPath={props.location.pathname} tapList={this.state.masterTapList} onNewTapCreation={this.handleAddingNewTapToList} />}  />
-          <Route path='/taplist' render={(props)=><TapList   tapList={this.state.masterTapList}    onPour={this.handlePintPour}
-          selectedTap={this.state.selectedTap} />} />
+          <Route path='/taplist' render={(props)=>
+            <TapList
+              tapList={this.state.masterTapList}
+              onPour={this.handlePintPour}
+              selectedTap={this.state.selectedTap} />} />
         </Switch>
       </div>
     );

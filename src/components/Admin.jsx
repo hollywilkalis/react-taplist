@@ -54,10 +54,10 @@ class Admin extends React.Component {
 }
 
 Admin.PropTypes = {
-    onNewTapCreation: PropTypes.func,
-    tapList: PropTypes.array,
-    currentRouterPath: PropTypes.string.isRequired,
-    selectedTap: PropTypes.string
+  onNewTapCreation: PropTypes.func,
+  tapList: PropTypes.array,
+  currentRouterPath: PropTypes.string.isRequired,
+  selectedTap: PropTypes.string
 };
 
 export default Admin;

@@ -1,14 +1,13 @@
 import React from 'react';
 import Tapcard from './Tapcard';
 import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
 
 
 function TapList(props){
 
   return (
 
-  <div className="clearfix">
+    <div className="clearfix">
       <style jsx>{`
         div {
           padding: 10px;
@@ -23,31 +22,31 @@ function TapList(props){
           font-family: 'Josefin Sans';
         }
         `}</style>
-            <h3>Our current taps</h3>
-            {Object.keys(props.tapList).map(function(tapId) {
-                var tapcard = props.tapList[tapId];
-                return <Tapcard
-                    name={tapcard.name}
-                    brand={tapcard.brand}
-                    price={tapcard.price}
-                    alcoholContent={tapcard.alcoholContent}
-                    amountRemaining={tapcard.amountRemaining}
-                    currentRouterPath={props.currentRouterPath}
-                    onPour={props.onPour}
-                    tapId={tapcard.id}
-                    selectedTap={props.selectedTap} />;
-            })}
-        </div>
-    );
+      <h3>Our current taps</h3>
+      {Object.keys(props.tapList).map(function(tapId) {
+        var tapcard = props.tapList[tapId];
+        return <Tapcard
+          name={tapcard.name}
+          brand={tapcard.brand}
+          price={tapcard.price}
+          alcoholContent={tapcard.alcoholContent}
+          amountRemaining={tapcard.amountRemaining}
+          currentRouterPath={props.currentRouterPath}
+          key={tapId}
+          tapId={tapId}
+          onPour={props.onPour}
+          selectedTap={props.selectedTap}/>;
+      })}
+    </div>
+  );
 }
 
 TapList.PropTypes = {
-    tapList: PropTypes.object,
-    location: PropTypes.object,
-    currentRouterPath: PropTypes.string,
-    selectedTap: PropTypes.object,
-    onPour: PropTypes.func.isRequired,
-    tapId: PropTypes.string.isRequired
+  tapList: PropTypes.object,
+  location: PropTypes.object,
+  currentRouterPath: PropTypes.string,
+  selectedTap: PropTypes.string,
+  onPour: PropTypes.func.isRequired
 };
 
 export default TapList;
