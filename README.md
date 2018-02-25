@@ -1,12 +1,12 @@
 # Tap List
 
-#### Tap list for hypothetical cider house, demonstrating use of React components, February 9 and 116, 2018
+#### Tap list for hypothetical cider house, demonstrating use of React components, February 9 and 16, 2018
 
 #### By Holly Wilkalis
 
 ## Description
 
-This project uses React to create a taplist for a hypothetical bar. It allows customers to see the ciders currently available on tap, the number of pints remaining in the keg, the price, the alcohol content, and the brand. It also provides an admin view for staff to add, edit, and delete kegs (The add function works but edit and delete are still in development). Future updates will allow conditional rendering of the view based on price and alcohol content.
+This project uses React to create a taplist for a hypothetical cider bar. It allows customers to see the ciders currently available on tap, the number of pints remaining in the keg, the price, the alcohol content, and the brand. The taplist view has a "sell a pint" button that decreases the tap amount remaining. It also has an admin view for staff to add kegs. Future updates will allow conditional rendering of the view based on price and alcohol content.
 
 ## Setup/Installation Requirements
 
@@ -16,13 +16,9 @@ This project uses React to create a taplist for a hypothetical bar. It allows cu
 * To navigate into the project directory run command $ cd react-taplist
 * Run command $ npm install
 * Run command $ npm start
-* To launch the app run command $webpack-dev-server
+* To launch the app run command $ webpack-dev-server
 
 You should now be able to view the project at http://localhost:8080/
-
-## Known Bugs
-
-At this time the project includes no interactivity, and all data is hardcoded into the appropriate components.
 
 ## Support and contact details
 
@@ -33,6 +29,8 @@ You can always find me at holly.wilkalis@gmail.com.
 Project uses React, JSX, ES6, npm, Weback, Lint, Babel, and React-Bootstrap
 
 ## Notes
+Update: 2/24/18
+The "sell a pint" button on the tap list now functions correctly.
 
 Update: 2/16/18
 Updated project flow diagram reflecting addition of state to project.
