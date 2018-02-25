@@ -55,9 +55,10 @@ class Body extends React.Component {
   }
 
   handlePintPour(tapId) {
-    this.setState({selectedTap: tapId});
-    console.log(tapId);
-
+    let newMasterTapList = Object.assign({}, this.state.masterTapList);
+    let tapServed = newMasterTapList[tapId];
+    tapServed.amountRemaining -= 1;
+    this.setState({masterTapList: newMasterTapList});
   }
 
   render(){

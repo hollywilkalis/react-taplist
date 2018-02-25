@@ -52,9 +52,8 @@ function Tapcard(props){
             }
           `}</style>
 
-        <div onClick={() => {props.onPour(props.tapId);}}>
-          {tapInformation}
-        </div>
+        {tapInformation}
+
       </div>
     );
   }
@@ -67,7 +66,7 @@ Tapcard.propTypes = {
   alcoholContent: PropTypes.number,
   amountRemaining: PropTypes.number,
   key: PropTypes.string,
-  location: PropTypes.string,
+  location: PropTypes.string.isRequired,
   currentRouterPath: PropTypes.string,
   onPour: PropTypes.func,
 
